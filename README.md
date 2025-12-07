@@ -207,14 +207,14 @@ Threading
 * 메인 화면(모드 선택)
 <img src="스크린샷/SudokuGame_main.png" width="400">
 
-* 난이도 선택(오리지널_normal/크로스_hard)
+* 난이도 선택(오리지널/크로스)
 <img src="스크린샷/SudokuGame_original.png" width="350">
 <img src="스크린샷/SudokuGame_cross.png" width="350">
 
 * 로딩창
 <img src="스크린샷/SudokuGame_loading.png" width="200">
 
-* 생성되는 보드(오리지널/크로스)
+* 생성되는 보드(오리지널_normal/크로스_hard)
 <img src="스크린샷/SudokuGame_original_play.png" width="400">
 <img src="스크린샷/SudokuGame_cross_play.png" width="400">
 
