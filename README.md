@@ -1,4 +1,4 @@
-Sudoku_Game Generator & Solver (GUI)
+# Sudoku_Game Generator & Solver (GUI)
 ===
 본 프로젝트는 GUI 기반 프로그램으로 로컬 환경에서 실행해야 합니다.
 깃허브에서는 GUI 디스플레이가 지원되지 않아 실행되지 않습니다.
