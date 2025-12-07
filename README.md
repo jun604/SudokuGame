@@ -95,9 +95,9 @@ cd sudokugame
 
 2. Python 요구사항
 
- Python 3.x
+ *Python 3.x
 
- Tkinter 
+ *Tkinter 
 
 3. 실행
 python main.py
