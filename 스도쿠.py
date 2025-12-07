@@ -4,7 +4,6 @@ import sudoku_board
 #from tkinter import *
 
 def sudoku(mode, level, loading_win):
-    # worker thread: 블록 작업(계산)을 여기서 수행
     board = sudoku_board.make_random(mode, level)
     # 로딩창 닫기
     loading_win.destroy()
@@ -16,9 +15,9 @@ def start_sudoku_in_thread(mode, level, loading_win):
     t = threading.Thread(target=sudoku, args=(mode, level, loading_win), daemon=True)
     t.start()
 
-def button_mode(inter, num):
+def button_mode(num):
     global mode
-    inter.withdraw()
+    interface.withdraw()
     if(num==1):
         mode = "original"
         txt="오리지널"
@@ -51,8 +50,8 @@ def button_lev(inter, num):
     tmp_inter.update()
     start_sudoku_in_thread(mode, level, tmp_inter)
 
-def button_ex(inter):
-    inter.destroy()
+def button_ex():
+    interface.destroy()
 
 if __name__ == "__main__":
     #global interface
@@ -60,16 +59,17 @@ if __name__ == "__main__":
     interface.title("스도쿠")
     title = sudoku_inter.Label(interface, height=3, text="스도쿠", font=("bold", 60))
     title.grid(row=0, columnspan=3)
-    ex = sudoku_inter.Button(interface, text="종료", width=8, height=2, font="bold", command=lambda: button_ex(interface))
+    ex = sudoku_inter.Button(interface, text="종료", width=8, height=2, font="bold", command=lambda: button_ex())
     ex.grid(row=0, column=2, columnspan=2)
     text = sudoku_inter.Label(interface, height=2, text="모드를 선택하십시오", font=("bold", 30))
     text.grid(row=1, columnspan= 3)
-    ori = sudoku_inter.Button(interface, text="오리지널", width=8, height=2, font="bold", command=lambda: button_mode(interface, 1))
+    ori = sudoku_inter.Button(interface, text="오리지널", width=8, height=2, font="bold", command=lambda: button_mode(1))
     ori.grid(row=3, column=0, columnspan=2)
     origin_mode = sudoku_inter.Label(interface, height=2, text=": 평범한 스도쿠입니다", font=("bold", 20))
     origin_mode.grid(row=3, column=1, columnspan=2)
-    cro = sudoku_inter.Button(interface, text="크로스", width=8, height=2, font="bold", command=lambda: button_mode(interface, 2))
+    cro = sudoku_inter.Button(interface, text="크로스", width=8, height=2, font="bold", command=lambda: button_mode(2))
     cro.grid(row=4, column=0)
     cross_mode = sudoku_inter.Label(interface, height=2, text=": 대각선도 스도쿠 규칙을 지켜야 합니다", font=("bold", 25))
     cross_mode.grid(row=4, column=1, columnspan=2)
     interface.mainloop()
+
