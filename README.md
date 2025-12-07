@@ -1,4 +1,4 @@
-Sudoku_Game Generator & Solver (GUI)
+SudokuGame   Generator & Solver (GUI)
 ===
 본 프로젝트는 GUI 기반 프로그램으로 로컬 환경에서 실행해야 합니다.<br>
 GitHub Codespaces 등 원격 환경에서는 GUI 디스플레이가 지원되지 않아 실행되지 않습니다.
@@ -90,7 +90,7 @@ GUI 기반 플레이
 # 실행 방법
 
 1. 저장소 클론
-git clone https://github.com/jun604/sudokugame.git
+git clone https://github.com/jun604/SudokuGame.git
 cd sudokugame
 
 2. Python 요구사항
