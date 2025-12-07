@@ -4,7 +4,7 @@ from tkinter import *
 import copy
 
 class button_sort:
-    def table(self, interface, board, input_row, mode_func):
+    def table(self, board, input_row, mode_func):
         global current_light_num
         current_light_num=[[]for i in range(10)]
         current_light_num[0].append(0)
@@ -244,4 +244,5 @@ def run_sudoku(board, mode, level, on_close=None):
     cal.table(interface, board, 3, mode_func)
 
     interface.mainloop()
+
 
